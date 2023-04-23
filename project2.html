@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="project.css">
+    
+    <style>
+        .myslides {
+            width: 100%;
+            height: 90vh;
+            display: none;
+        }
+        .member-card {
+            margin: 3%;
+            position: relative;
+        }
+        .text {
+            position: absolute;
+            top: 17px;
+            left: 10px;
+        }
+        .container{
+            max-width: 1200px;
+            margin: auto;
+            background: #a13144;
+            overflow: auto;
+        }
+        .gallery{
+            margin: 2px;
+            border: 1px solid  #ccc;
+            float: left;
+            width: 280px;
+        }
+        .gallery img{
+            display: flex;
+            width: 40vh;
+        }
+        .desc{
+            padding: 2px;
+            text-align: center;
+        }
+        .row{
+            background: #d81476;
+            width: 80%;
+            margin: 4% auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .col{
+            flex-basis: 25%;
+            text-align: center;
+            font-size: 22px;
+            overflow: hidden;
+        }
+        .col img{
+            width: 100%;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .social-link{
+            display: flex;
+            margin: 5px;
+            padding: 10px;
+            align-items: center;
+            float:inline-end;
+        }
+        .social-link p img{
+            padding: 0px;
+            margin: 2px;
+            width: 42px;
+            height: 45px;
+            line-height: 32px;
+            border: 0.5px solid #000;
+            transition: transform.5s;
+        }
+        .social-link img:hover{
+            background: #000;
+            color:ffe501;
+            transform: translateY(-15px);
+        }
+        .col:hover img{
+            transform: scale(1.1);
+        }
+        .col span{
+            width:0;
+            border-top: 20px solid black;
+            border-bottom: 20px solid black;
+            background-origin: 15px solid red;
+            position: absolute;
+            top: 0;
+            left:0;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="Art">Art</span>Van
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="art.pdf">Art</a>
+                <a href="allglry.html" target="_blank" >Gallery</a>
+                <a href="contactus.html" target="_blank">Contact Us</a>
+            </div>
+            <div class="icon">
+                <a href="login.html" target="_blank">Login</a>
+            </div>
+        </nav>
+        
+            <div class="slider" style="max-width:1500px">
+                <img class="myslides" src="ad.jpg" style="width:100%; height: 90vh;" >
+                <img class="myslides" src="s4.jpg" style="width:100%; height: 90vh;" >
+                <img class="myslides" src="s5.jpg" style="width:100%; height: 90vh;" >
+            <
+                /div>
+        
+        <section class="h-text">        
+    </header>
+    <section class="filter-gallery">
+        <div class="portfolio-menu">
+            <div id="buttons">
+                <button class="btn" onclick="filterObjects('all')"> All</button>
+                <button class="btn" onclick="filterObjects('Painting')"> Painting</button>
+                <button class="btn" onclick="filterObjects('Sculpture')"> Sculpture</button>
+                <button class="btn" onclick="filterObjects('Mandala')"> Mandala</button>
+                <button class="btn" onclick="filterObjects('Digital Art')"> Digital art</button>
+                <button class="btn" onclick="filterObjects('Abstract Art')"> Abstract Art</button>
+                <button class="btn" onclick="filterObjects('Landscape')"> Landscape</button>      
+            </div>
+        
+        </div>
+        <div class="portfolio-item">
+            
+                
+            <div class="box Painting">
+                 <img src="./17.jpg"> 
+            </div>
+            <div class="box Sculpture"> 
+                <img src="./10.jpg"> 
+            </div>
+            <div class="box Mandala"> 
+                <img src="./t.jpg">
+            </div>
+            <div class="box Digital Art">
+                <img src="./i.jpg" >
+            </div>
+            <div class="box Abstract Art">
+                <img src="./13.jpg" >
+            </div>
+            <div class="box Landscape">
+                <img src="./14.jpg" >
+            </div>
+            <div class="box Painting">
+                <img src="./j.jpg" >
+            </div>                  
+            <div class="box Sculpture">
+                <img src="./16.jpg" >
+            </div>
+            <div class="box Mandala">
+                <img src="./1.jpg" >
+            </div>
+            <div class="box Abstract Art">
+                <img src="./2.jpg" >
+            </div>
+            <div class="box Digital Art">
+                <img src="./3.jpg" >
+            </div>
+            <div class="box Landscape">
+                <img src="./4.jpg" >
+            </div>
+            <div class="box Mandala">
+                <img src="./n.jpg" >
+            </div>
+            <div class="box Abstract Art">
+                <img src="./a3.jpg" >
+            </div>
+            <div class="box Digital Art">
+                <img src="./7.jpg" > </div>
+            <div class="box Sculpture">
+                <img src="./8.jpg" > </div>                  
+            <div class="box Painting">
+                <img src="./k.jpg" >
+            </div>
+            <div class="box Landscape">
+                <img src="./t.jpg" >
+            </div>
+            <div class="box Mandala">
+                <img src="./c.jpg"> </div>
+            <div class="box Painting"> 
+                <img src="./v.jpg" > 
+            </div>
+
+        </div>
+    </section>
+    <section class="member">
+        <div class="member-info">
+            <h1>Our<span> ARTIST</span></h1>
+        </div>
+        <div class="row">
+            
+            <div class="col">
+                <span></span>
+                <a href="vanduglry.html">
+                <img src="VND4.jpg"></a>
+            </div>
+            <div class="col">
+                <h3>Vandana</h3>
+                <p>Artist, Student</p>
+                <div class="social-link"> 
+                    <p><img src="./ig.jpg" width="100"></p>
+                    <p><img src="./in.jpg" width="100"></p>
+                    <p><img src="./yt.jpg" width="100"></p>
+                    <p><img src="./tw.jpg" width="100"></p>
+                    <p><img src="./fb2.jpg" width="100"></p>
+
+                </div>
+            </div>
+            
+            <div class="col">
+                <span></span>
+                <a href="anjaliglry.html">
+                <img src="./anli1.jpg"></a>
+            </div>
+            <div class="col">
+                <h3>Anjali Singh</h3>
+                <p>Student</p>
+                <div class="social-link"> 
+                    <p><img src="./ig.jpg" width="100"></p>
+                    <p><img src="./in.jpg" width="100"></p>
+                    <p><img src="./yt.jpg" width="100"></p>
+                    <p><img src="./tw.jpg" width="100"></p>
+                    <p><img src="./fb2.jpg" width="100"></p>
+
+                </div>
+            </div>
+            
+            <div class="col">
+                <h3>Nishu Mehra</h3>
+                <p>Student</p>
+                <div class="social-link"> 
+                    <p><img src="./ig.jpg" width="100"></p>
+                    <p><img src="./in.jpg" width="100"></p>
+                    <p><img src="./yt.jpg" width="100"></p>
+                    <p><img src="./tw.jpg" width="100"></p>
+                    <p><img src="./fb2.jpg" width="100"></p>
+
+                </div>
+
+            </div>
+            <div class="col">
+                <span></span>
+                <a href="nishuglry.html">
+                <img src="./nishu.jpg"></a>
+            </div>
+            <div class="col">
+                <h3>Premlata Chaubey</h3>
+                <p>Student</p>
+                <div class="social-link"> 
+                    <p><img src="./ig.jpg" width="100"></p>
+                    <p><img src="./in.jpg" width="100"></p>
+                    <p><img src="./yt.jpg" width="100"></p>
+                    <p><img src="./tw.jpg" width="100"></p>
+                    <p><img src="./fb2.jpg" width="100"></p>
+
+                </div>
+
+            </div>
+
+            <div class="col">
+                <span></span>
+                <a href="premuglry.html">
+
+                <img src="./prem.jpg"></a>
+            </div>
+            
+        </div>
+
+    </section>
+        <footer>
+            <div class="newsletter">
+                <div>
+                    <h1 style="font-size: 50px; color: antiquewhite";>Have Questions</h1>
+                    <p style="font-size: 25px; color: bisque;">
+                        We're here to HELP.
+                    </p>
+                </div>
+                <div class="ntext">
+                    <label>
+                        <input type="text" name="" placeholder="Ask Questions">
+                        <button>Send</button>
+                    </label>
+                </div>
+            </div>
+            <div class="f-contact">
+                
+                <div>
+                    <h1>About </h1>
+                    <p>About ArtVan</p>
+                    <p>FAQ</p>                                                 
+                </div>
+                <div>
+                    <h1>
+                        Policies</h1>
+                        <p>Terms & Conditions</p>
+                        <p>Cookies</p>
+                    
+                </div>
+                    <div>
+                        <h1>
+                            Services</h1>
+                            <p>Help</p>             
+                            <p>Job</p>                                      
+                    </div>
+                    
+                    <div>
+                        <h1> Follow Us </h1>
+                        <div class="social-link"> 
+
+                          <a href="#">  <p><img src="./ig.jpg" width="100"></p></a>
+                          <a href="#"> <p><img src="./tw.jpg" width="100"></p></a>
+                          <a href="#"> <p><img src="./yt.jpg" width="100"></p></a>
+                          <a href="#"> <p><img src="./in.jpg" width="100"></p></a>
+                          <a href="#"> <p><img src="./fb2.jpg" width="100"></p></a>
+        
+                        </div>                                                  
+                    </div>
+            </div>          
+        </footer>
+<script>
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("myslides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000);
+
+
+    }
+</script>
+<script>
+filterObjects("all");
+
+function filterObjects(c){
+    var x, i;
+    x = document.getElementsByClassName("box");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+        removeClass(x[i], "show");
+        if(x[i].className.indexOf(c) > -1) addClass(x[i], "show")
+    }
+}
+
+function addClass(element, name){
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++){
+        if (arr1.indexOf(arr2[i]) == -1){
+            element.className += " " + arr2[i];
+        }
+    }
+}
+
+function removeClass(element, name){
+    var i, arr1, arr2;                  
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++){
+        while (arr1.indexOf(arr2[i]) > -1){
+            arr1.splice(arr1.indexOf(arr2[i]), 1);                       
+        }
+    }
+    element.className = arr1.join(" ");
+}
+                
+</script>  
+</body>
+</html>
